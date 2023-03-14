@@ -1,0 +1,31 @@
+#N canvas 250 190 1565 826 12;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array ch5sample1 5513 float 2;
+#X coords 0 1 5513 -1 200 140 1 0 0;
+#X restore 443 120 graph;
+#X obj 191 153 soundfiler;
+#X floatatom 191 185 8 0 0 0 - - - 0;
+#X floatatom 34 212 9 0 0 0 - - - 0;
+#X obj 35 20 inlet;
+#X text 82 19 loadbang;
+#X obj 191 220 s ch5endsample1;
+#X obj 35 152 r ch5endsample1;
+#X obj 35 184 v ch5dur1;
+#X obj 35 58 t b b;
+#X obj 67 91 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 35 92 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X text 87 56 1 load files \; 2 register variables;
+#X msg 191 122 read -resize chain.wav ch5sample1;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 4 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 9 0 11 0;
+#X connect 9 1 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 8 0;
+#X connect 13 0 1 0;
+#X coords 0 0 1 1 85 60 0;
